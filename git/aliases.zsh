@@ -7,23 +7,37 @@
 #
 # I'm hardcoding it to an installed rvm (using rvm's `rvm 1.8.7,ruby /hub/path`
 # syntax is way too slow). It should work fine for those without rvm, though.
-if [[ -s $HOME/.rvm/scripts/rvm ]]
-then
-  if $(which hub &> /dev/null) && [[ -s $HOME/.rvm/rubies/ruby-1.8.7-p334 ]]
-  then
-    alias git='$HOME/.rvm/rubies/ruby-1.8.7-p334/bin/ruby `which hub`'
-  else
-  fi
-fi
+#if [[ -s $HOME/.rvm/scripts/rvm ]]
+#then
+#  if $(which hub &> /dev/null) && [[ -s $HOME/.rvm/rubies/ruby-1.8.7-p334 ]]
+#  then
+#    alias git='$HOME/.rvm/rubies/ruby-1.8.7-p334/bin/ruby `which hub`'
+#  else
+#  fi
+#fi
 
-# The rest of my fun git aliases
-alias gl='git pull --prune'
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
-alias gp='git push origin HEAD'
-alias gd='git diff'
-alias gc='git commit'
-alias gca='git commit -a'
+# Git aliases:
+alias gs='git status -s -b'
+alias ga='git add'
 alias gco='git checkout'
+alias gl='git pull'
+alias gp='git push'
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias gd='git diff | subl'
+alias gdb='git diff --stat --color'
+alias gc='git commit -m'
+alias gcm='git commit -m'
+alias gcma='git commit -v -a'
 alias gb='git branch'
-alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+
+# HOLMAN -> The rest of my fun git aliases
+# alias gl='git pull --prune'
+# alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+# alias gp='git push origin HEAD'
+# alias gd='git diff'
+# alias gc='git commit'
+# alias gca='git commit -a'
+# alias gco='git checkout'
+# alias gb='git branch'
+# alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
+# alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
