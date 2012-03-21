@@ -7,6 +7,12 @@ export PROJECTS=~/Development/apps
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) source $config_file
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+DISABLE_LS_COLORS="true"
+ZSH_THEME=gentoo
+
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
 if [[ -a ~/.localrc ]]

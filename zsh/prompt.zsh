@@ -14,9 +14,9 @@ git_dirty() {
   else
     if [[ $st == "nothing to commit (working directory clean)" ]]
     then
-      echo "on %{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}"
+      echo "on %{$fg[green]%}$(git_prompt_info)%{$reset_color%}"
     else
-      echo "on %{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%}"
+      echo "on %{$fg[red]%}$(git_prompt_info)%{$reset_color%}"
     fi
   fi
 }
@@ -36,18 +36,10 @@ need_push () {
   then
     echo " "
   else
-    echo " with %{$fg_bold[magenta]%}unpushed%{$reset_color%} "
+    echo " with %{$fg[magenta]%}unpushed%{$reset_color%} "
   fi
 }
 
-rvm_prompt(){
-  if $(which rvm &> /dev/null)
-  then
-	  echo "%{$fg_bold[yellow]%}$(rvm tools identifier)%{$reset_color%}"
-	else
-	  echo ""
-  fi
-}
 
 # This keeps the number of todos always available the right hand side of my
 # command line. I filter it to only count those tagged as "+next", so it's more
@@ -72,7 +64,7 @@ directory_name(){
   echo "%{$fg_bold[white]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(rvm_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
+export PROMPT=$'$(directory_name) $(git_dirty)$(need_push) › '
 set_prompt () {
   export RPROMPT="%{$fg_bold[white]%}$(todo)%{$reset_color%}"
 }
