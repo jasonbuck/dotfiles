@@ -2,6 +2,9 @@ require 'rake'
 
 desc "Hook our dotfiles into system-standard positions."
 task :install do
+  # Symlink to repo working dir from user folder:
+  'ln -s ~/dev/apps/dotfiles ~/.dotfiles' unless File.directory?("#{ENV["HOME"]}/.dotfiles")
+
   linkables = Dir.glob('*/**{.symlink}')
 
   skip_all = false
@@ -32,6 +35,7 @@ task :install do
     end
     `ln -s "$PWD/#{linkable}" "#{target}"`
   end
+
 end
 
 task :uninstall do
