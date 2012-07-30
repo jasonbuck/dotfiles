@@ -14,7 +14,7 @@ git_dirty() {
   else
     if [[ $st == "nothing to commit (working directory clean)" ]]
     then
-      echo "on %{$fg[green]%}$(git_prompt_info)%{$reset_color%}"
+      echo "on %{$fg[blue]%}$(git_prompt_info)%{$reset_color%}"
     else
       echo "on %{$fg[red]%}$(git_prompt_info)%{$reset_color%}"
     fi
@@ -23,7 +23,7 @@ git_dirty() {
 
 git_prompt_info () {
  ref=$(/usr/bin/git symbolic-ref HEAD 2>/dev/null) || return
-# echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
+ # echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
  echo "${ref#refs/heads/}"
 }
 
@@ -36,7 +36,7 @@ need_push () {
   then
     echo " "
   else
-    echo " with %{$fg[magenta]%}unpushed%{$reset_color%} "
+    echo " with %{$fg[green]%}unpushed%{$reset_color%} "
   fi
 }
 
@@ -61,7 +61,7 @@ todo(){
 }
 
 directory_name(){
-  echo "%{$fg_bold[white]%}%1/%\/%{$reset_color%}"
+  echo "%{$fg[white]%}%1/%\/%{$reset_color%}"
 }
 
 export PROMPT=$'$(directory_name) $(git_dirty)$(need_push) › '
