@@ -1,6 +1,6 @@
 # Rails aliases:
 alias b="bundle exec"
-alias deploy="bundle exec cap staging deploy"
+alias deploy="bundle exec cap deploy"
 alias log="tail -f log/development.log"
 alias testlog="tail -f log/test.log"
 alias prolog="bundle exec cap production tail:rails"
