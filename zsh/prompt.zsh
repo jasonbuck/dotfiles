@@ -14,9 +14,9 @@ git_dirty() {
   else
     if [[ $st == "nothing to commit (working directory clean)" ]]
     then
-      echo "on %{$fg[blue]%}$(git_prompt_info) ☀%{$reset_color%}"
+      echo "on %{$fg[blue]%}$(git_prompt_info) ☀ %{$reset_color%}"
     else
-      echo "on %{$fg[red]%}$(git_prompt_info) ☠%{$reset_color%}"
+      echo "on %{$fg[red]%}$(git_prompt_info) ☠ %{$reset_color%}"
     fi
   fi
 }
