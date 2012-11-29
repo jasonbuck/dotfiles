@@ -34,7 +34,13 @@ task :install do
       `mv "$HOME/.#{file}" "$HOME/.#{file}.backup"` if backup || backup_all
     end
     `ln -s "$PWD/#{linkable}" "#{target}"`
+
   end
+
+  # "Manually" install Sublime preferences:
+  sublime_preferences_location = '~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings'
+  `rm -f #{sublime_preferences_location}`
+  `ln -s ~/.dotfiles/sublime2/User/Preferences.sublime-settings #{sublime_preferences_location}`
 
 end
 
@@ -49,10 +55,10 @@ task :uninstall do
     if File.symlink?(target)
       FileUtils.rm(target)
     end
-    
+
     # Replace any backups made during installation
     if File.exists?("#{ENV["HOME"]}/.#{file}.backup")
-      `mv "$HOME/.#{file}.backup" "$HOME/.#{file}"` 
+      `mv "$HOME/.#{file}.backup" "$HOME/.#{file}"`
     end
 
   end

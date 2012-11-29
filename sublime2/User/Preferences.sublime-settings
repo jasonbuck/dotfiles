@@ -1,16 +1,37 @@
+// Settings in here override those in "Default/Preferences.sublime-settings", and
+// are overridden in turn by file type specific settings.
 {
+  //"color_scheme": "Packages/Color Scheme - Default/Tomorrow.tmTheme",
   "color_scheme": "Packages/Color Scheme - Default/Tomorrow-Night.tmTheme",
-  //"theme": "Soda Dark.sublime-theme",
-  "font_size": 13.0,
-  "vintage_start_in_command_mode": true,
+  "copyOnMouseSelect": false,
+  "find_selected_text": true,
+  "dictionary": "Packages/Language - English/en_US.dic",
+  "drawWhiteSpace": "none",
+  //"font_face": "Inconsolata",
+  //"font_face": "Menlo",
+  "font_size": 14.0,
+  "gutter": true,
+  "highlightLine": true,
+  "ignored_packages":
+  [
+    "Vintage",
+    "SyncedSideBar"
+  ],
+  "indent_to_bracket": true,
+  "rulers":
+  [
+    80
+  ],
+  "save_on_focus_lost": true,
   "tab_size": 2,
+  //"theme": "Soda Light.sublime-theme",
   "translate_tabs_to_spaces": true,
-  "drawWhiteSpace": true,
-  "matchBracketsAngle": true,
-  "matchBracketsBraces": true,
-  "matchBracketsSquare": true,
-  "rulers": [ 80 ],
-  "show_minimap": false,
-  "trimTrailingWhiteSpaceOnSave": true,
-  "highlight_modified_tabs": true
+  "trim_trailing_white_space_on_save": true,
+  "use_tab_stops": true,
+  "autoIndent": true,
+  "detect_indentation": false,
+  "wantVerticalScrollBar": false,
+  "word_wrap": false,
+  "show_minimap":true,
+  "draw_minimap_border": false
 }
