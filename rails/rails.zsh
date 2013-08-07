@@ -1,13 +1,14 @@
 # Rails aliases:
 alias b="bundle exec"
 alias deploy="bundle exec cap deploy"
+alias prodeploy="bundle exec cap deploy"
 alias log="tail -f log/development.log"
-alias testlog="tail -f log/test.log"
-alias prolog="bundle exec cap production tail:rails"
+alias stalog="bundle exec cap production log:rails"
+alias staglog=stalog
+alias prolog="bundle exec cap production log:rails"
 alias restart="touch tmp/restart.txt;echo '*** App restarted ***'"
 alias migrate="bundle exec rake db:migrate"
 alias rollback="bundle exec rake db:rollback"
 alias redo="bundle exec rake db:migrate:redo"
-alias deploy="bundle exec cap deploy"
 alias routes="bundle exec rake routes"
-alias resque="bundle exec rake resque:work QUEUE=\*"
+alias sk="bundle exec sidekiq -q low -q default -q processing -q critical"
