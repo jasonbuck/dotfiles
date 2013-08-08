@@ -1,0 +1,11 @@
+#!/bin/sh
+# Setup a machine for Sublime Text 3
+#set -x
+
+# symlink settings in
+sublime_dir=~/Library/Application\ Support/Sublime\ Text\ 3/Packages
+
+# Grab the Soda theme
+rm -rf "$sublime_dir/Theme - Soda"
+cd "$sublime_dir"
+git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"

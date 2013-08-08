@@ -1,16 +1,14 @@
 #!/bin/sh
 # Setup a machine for Sublime Text 3
-set -x
+#set -x
 
 # symlink settings in
 sublime_dir=~/Library/Application\ Support/Sublime\ Text\ 3/Packages
 
-mv "$sublime_dir/Color Scheme - Default" "$sublime_dir/Color Scheme - Default.backup"
+#mv "$sublime_dir/Color Scheme - Default" "$sublime_dir/Color Scheme - Default.backup"
+rm -rf "$sublime_dir/Color Scheme - Default"
 ln -s "$ZSH/sublime/Packages/Color Scheme - Default" "$sublime_dir"
 
-mv "$sublime_dir/User" "$sublime_dir/User.backup"
+#mv "$sublime_dir/User" "$sublime_dir/User.backup"
+rm -rf "$sublime_dir/User"
 ln -s "$ZSH/sublime/Packages/User" "$sublime_dir"
-
-# Grab the Soda theme
-cd "$sublime_dir"
-git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"

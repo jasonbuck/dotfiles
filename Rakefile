@@ -37,10 +37,10 @@ task :install do
 
   end
 
-  # "Manually" install Sublime preferences:
-  sublime_preferences_location = '~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings'
-  `rm -f #{sublime_preferences_location}`
-  `ln -s ~/.dotfiles/sublime/User/Preferences.sublime-settings #{sublime_preferences_location}`
+  # "Manually" install Sublime setup:
+  `sublime/setup`
+  #`sublime/install_theme`  Requires a clone - ucomment as neede
+
 
 end
 
