@@ -1,26 +1,14 @@
 {
 	"autoIndent": true,
-  "soda_classic_tabs": false,
-
-  // Light scheme:
-  //"theme": "Soda Light 3.sublime-theme",
-  //"color_scheme": "Packages/Color Scheme - Default/Tomorrow.tmTheme",
-  //"color_scheme": "Packages/Color Scheme - Default/Solarized (light).tmTheme",
-
-  //Dark scheme:
-  "theme": "Soda Dark 3.sublime-theme",
-  "color_scheme": "Packages/Color Scheme - Default/Tomorrow-Night.tmTheme",
-  //"color_scheme": "Packages/Color Scheme - Default/twilight.tmTheme",
-  //"color_scheme": "Packages/Color Scheme - Default/railscasts.tmTheme",
-  //"color_scheme": "Packages/Color Scheme - Default/Solarized (dark).tmTheme",
-
-  "copyOnMouseSelect": false,
+	"color_scheme": "Packages/Theme - SpaceGray/base16-ocean.light.tmTheme",
+  //"color_scheme": "Packages/Color Scheme - Default/Tomorrow-Night.tmTheme",
+	"copyOnMouseSelect": false,
 	"detect_indentation": false,
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"drawWhiteSpace": "none",
 	"draw_minimap_border": false,
 	"find_selected_text": true,
-	"font_size": 14.0,
+	"font_size": 11.0,
 	"git_gutter_live_mode": true,
 	"gutter": true,
 	"highlightLine": true,
@@ -38,7 +26,9 @@
 	],
 	"save_on_focus_lost": true,
 	"show_minimap": true,
+	"soda_classic_tabs": false,
 	"tab_size": 2,
+	"theme": "Soda Dark 3.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_tab_stops": true,

@@ -9,3 +9,8 @@ sublime_dir=~/Library/Application\ Support/Sublime\ Text\ 3/Packages
 rm -rf "$sublime_dir/Theme - Soda"
 cd "$sublime_dir"
 git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
+
+# Grab the Spacegray theme
+rm -rf "$sublime_dir/Theme - Spacegray"
+cd "$sublime_dir"
+git clone https://github.com/kkga/spacegray/ "Theme - Spacegray"
