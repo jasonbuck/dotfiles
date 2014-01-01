@@ -4,13 +4,19 @@
 
 # symlink settings in
 sublime_dir=~/Library/Application\ Support/Sublime\ Text\ 3/Packages
-
-# Grab the Soda theme
-rm -rf "$sublime_dir/Theme - Soda"
 cd "$sublime_dir"
+
+rm -rf "$sublime_dir/Theme - Soda"
 git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
 
-# Grab the Spacegray theme
 rm -rf "$sublime_dir/Theme - Spacegray"
-cd "$sublime_dir"
 git clone https://github.com/kkga/spacegray/ "Theme - Spacegray"
+
+rm -rf "$sublime_dir/Theme - Flatland"
+git clone git://github.com/thinkpixellab/flatland.git "Theme - Flatland"
+
+rm -rf "$sublime_dir/Theme - Tomorrow.*"
+# Tomorrow includes many other implementations - we want only Sublime/Textmate
+git clone git://github.com/chriskempson/tomorrow-theme "Theme - Tomorrow.tmp"
+mv "Theme - Tomorrow.tmp/textmate" "Theme - Tomorrow"
+rm -rf "Theme - Tomorrow.tmp"
