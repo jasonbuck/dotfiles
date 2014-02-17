@@ -38,7 +38,7 @@ task :install do
   end
 
   # "Manually" install Sublime setup:
-  `sublime/setup && sublime/install_theme`
+  # `sublime/setup && sublime/install_theme`
 
 end
 
