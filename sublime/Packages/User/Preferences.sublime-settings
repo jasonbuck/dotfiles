@@ -5,9 +5,10 @@
 
   //"color_scheme": "Packages/Theme - Tomorrow/Tomorrow.tmTheme",
   //"color_scheme": "Packages/Theme - Tomorrow/Tomorrow-Night.tmTheme",
-  "color_scheme": "Packages/Theme - Flatland/Flatland Dark.tmTheme",
+  //"color_scheme": "Packages/Color Scheme - Base16/base16-railscasts.dark.tmTheme",
   //"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
   //"color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
+  "color_scheme": "Packages/Theme - Flatland/Flatland Dark.tmTheme",
 
   "copyOnMouseSelect": false,
   "autoIndent": true,
@@ -21,7 +22,6 @@
 	"git_gutter_live_mode": true,
 	"gutter": true,
 	"highlightLine": true,
-	//"highlight_modified_tabs": true,
 	"ignore_inodes": true,
 	"ignored_packages":
 	[
@@ -37,7 +37,7 @@
 	"save_on_focus_lost": true,
 	"show_minimap": true,
 	//"soda_classic_tabs": false,
-  "flatland_square_tabs": true,
+  //"flatland_square_tabs": true,
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,

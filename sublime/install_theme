@@ -20,3 +20,5 @@ rm -rf "$sublime_dir/Theme - Tomorrow.*"
 git clone git://github.com/chriskempson/tomorrow-theme "Theme - Tomorrow.tmp"
 mv "Theme - Tomorrow.tmp/textmate" "Theme - Tomorrow"
 rm -rf "Theme - Tomorrow.tmp"
+
+git clone https://github.com/chriskempson/base16-textmate.git "Color Scheme - Base16"
