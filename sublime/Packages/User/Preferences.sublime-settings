@@ -6,9 +6,9 @@
   //"color_scheme": "Packages/Theme - Tomorrow/Tomorrow.tmTheme",
   //"color_scheme": "Packages/Theme - Tomorrow/Tomorrow-Night.tmTheme",
   //"color_scheme": "Packages/Color Scheme - Base16/base16-railscasts.dark.tmTheme",
-  //"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
+  "color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
   //"color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
-  "color_scheme": "Packages/Theme - Flatland/Flatland Dark.tmTheme",
+  //"color_scheme": "Packages/Theme - Flatland/Flatland Dark.tmTheme",
 
   "copyOnMouseSelect": false,
   "autoIndent": true,
