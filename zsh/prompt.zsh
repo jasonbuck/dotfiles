@@ -31,18 +31,17 @@ git_dirty() {
   then
     echo ""
   else
-    if [[ $st == "nothing to commit, working directory clean" ]]
+    if [[ $st =~ "working directory clean" ]]
     then
-      echo "%{$darkgray%}on%{$reset_color%} %{$blue%}⭠ $(git_prompt_info)%{$reset_color%}"  # ➙ ☀
+      echo "%{$darkgray%}on%{$reset_color%} %{$blue%}⭠ $(git_prompt_info) ☀%{$reset_color%}"  # ➙ ☀
     else
-      echo "%{$darkgray%}on%{$reset_color%} %{$lightred%}⭠ $(git_prompt_info)%{$reset_color%}"  # ☠
+      echo "%{$darkgray%}on%{$reset_color%} %{$lightred%}⭠ $(git_prompt_info) ☠%{$reset_color%}"  # ☠
     fi
   fi
 }
 
 git_prompt_info () {
  ref=$(/usr/bin/git symbolic-ref HEAD 2>/dev/null) || return
- # echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
  echo "${ref#refs/heads/}"
 }
 
@@ -84,11 +83,8 @@ directory_name(){
 }
 
 export PROMPT=$'$(directory_name) $(git_dirty)$(need_push) ›'
-set_prompt () {
-  export RPROMPT="%{$fg_bold[white]%}$(todo)%{$reset_color%}"
-}
+export RPROMPT=$'$(todo)'
 
 precmd() {
   title "zsh" "%m" "%55<...<%~"
-  set_prompt
 }
