@@ -29,7 +29,7 @@ alias gpd='git push && cap deploy'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gd='git diff | subl'
 alias gdb='git diff --stat --color'
-alias gc='git commit -m'
+alias gc='git commit'
 alias gcm='git commit -m'
 alias gcma='git commit -v -a'
 alias gb='git branch'
