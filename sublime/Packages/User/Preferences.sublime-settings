@@ -37,7 +37,7 @@
 	"save_on_focus_lost": true,
 	"show_minimap": true,
 	//"soda_classic_tabs": false,
-  //"flatland_square_tabs": true,
+  "flatland_square_tabs": true,
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
