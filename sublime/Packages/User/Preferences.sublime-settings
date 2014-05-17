@@ -1,14 +1,18 @@
 {
 	//"theme": "Soda Dark 3.sublime-theme",
   //"theme": "Flatland Dark.sublime-theme",
-  "theme": "Spacegray.sublime-theme",
 
   //"color_scheme": "Packages/Theme - Tomorrow/Tomorrow.tmTheme",
   //"color_scheme": "Packages/Theme - Tomorrow/Tomorrow-Night.tmTheme",
   //"color_scheme": "Packages/Color Scheme - Base16/base16-railscasts.dark.tmTheme",
-  "color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
   //"color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
   //"color_scheme": "Packages/Theme - Flatland/Flatland Dark.tmTheme",
+
+  "theme": "Spacegray.sublime-theme",
+  "color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
+
+  //"theme": "predawn.sublime-theme",
+  //"color_scheme": "Packages/Predawn/predawn.tmTheme",
 
   "copyOnMouseSelect": false,
   "autoIndent": true,
@@ -38,10 +42,14 @@
 	"show_minimap": true,
 	//"soda_classic_tabs": false,
   "flatland_square_tabs": true,
+  "sidebar_default": true, // Replace default with xsmall, small, medium, large or xlarge
+  "tabs_small": true, //"tabs_[small/medium/large]": true
+
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_tab_stops": true,
 	"wantVerticalScrollBar": false,
-	"word_wrap": false
+	"word_wrap": false,
+  "scroll_past_end": true
 }
