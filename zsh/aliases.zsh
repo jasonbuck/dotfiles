@@ -23,6 +23,8 @@ alias 'dus=du -sckx * | sort -nr' #directories sorted by size
 
 alias 'wordy=wc -w * | sort | tail -n10' # sort files in current directory by the number of words they contain
 alias 'filecount=find . -type f | wc -l' # number of files (not directories)
+alias pbj="pbpaste | replace '=>' ':' | python -mjson.tool"
+
 
 # -------------------------------------------------------------------
 # Mac only
