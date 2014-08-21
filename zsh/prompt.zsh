@@ -33,9 +33,9 @@ git_dirty() {
   else
     if [[ $st =~ "working directory clean" ]]
     then
-      echo "%{$darkgray%}on%{$reset_color%} %{$blue%}⭠ $(git_prompt_info) ☀%{$reset_color%}"  # ➙ ☀
+      echo "%{$lightgray%}on%{$reset_color%} %{$blue%}⭠ $(git_prompt_info) ☀%{$reset_color%}"  # ➙ ☀
     else
-      echo "%{$darkgray%}on%{$reset_color%} %{$lightred%}⭠ $(git_prompt_info) ☠%{$reset_color%}"  # ☠
+      echo "%{$lightgray%}on%{$reset_color%} %{$lightred%}⭠ $(git_prompt_info) ☠%{$reset_color%}"  # ☠
     fi
   fi
 }
@@ -54,7 +54,7 @@ need_push () {
   then
     echo " "
   else
-    echo " %{$darkgray%}with%{$reset_color%} %{$purple%}unpushed➙%{$reset_color%} "
+    echo " %{$lightgray%}with%{$reset_color%} %{$purple%}unpushed➙%{$reset_color%} "
   fi
 }
 
@@ -79,7 +79,7 @@ todo(){
 }
 
 directory_name(){
-  echo "%{$darkgray%}%1/%\/%{$reset_color%}"
+  echo "%{$lightgray%}%1/%\/%{$reset_color%}"
 }
 
 export PROMPT=$'$(directory_name) $(git_dirty)$(need_push) ›'
