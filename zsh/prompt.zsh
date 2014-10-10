@@ -35,7 +35,7 @@ git_dirty() {
     then
       echo "%{$lightgray%}on%{$reset_color%} %{$blue%}⭠ $(git_prompt_info) ☀%{$reset_color%}"  # ➙ ☀
     else
-      echo "%{$lightgray%}on%{$reset_color%} %{$lightred%}⭠ $(git_prompt_info) ☠%{$reset_color%}"  # ☠
+      echo "%{$lightgray%}on%{$reset_color%} %{$lightred%}⭠ $(git_prompt_info)%{$reset_color%}"  # ☠
     fi
   fi
 }
@@ -45,36 +45,14 @@ git_prompt_info () {
  echo "${ref#refs/heads/}"
 }
 
-unpushed () {
-  git cherry -v @{upstream} 2>/dev/null
-}
+unpushed () {git cherry -v @{upstream} 2>/dev/null |  wc -l | tr -s " "}
 
 need_push () {
-  if [[ $(unpushed) == "" ]]
+  if [[ $(unpushed) == "0" ]]
   then
     echo " "
   else
-    echo " %{$lightgray%}with%{$reset_color%} %{$purple%}unpushed➙%{$reset_color%} "
-  fi
-}
-
-
-# This keeps the number of todos always available the right hand side of my
-# command line. I filter it to only count those tagged as "+next", so it's more
-# of a motivation to clear out the list.
-todo(){
-  if $(which todo.sh &> /dev/null)
-  then
-    num=$(echo $(todo.sh ls +next | wc -l))
-    let todos=num-2
-    if [ $todos != 0 ]
-    then
-      echo "$todos"
-    else
-      echo ""
-    fi
-  else
-    echo ""
+    echo " %{$lightgray%}with%{$reset_color%}%{$purple%}$(unpushed) unpushed ➙%{$reset_color%} "
   fi
 }
 
@@ -83,8 +61,9 @@ directory_name(){
 }
 
 export PROMPT=$'$(directory_name) $(git_dirty)$(need_push) ›'
-export RPROMPT=$'$(todo)'
 
 precmd() {
   title "zsh" "%m" "%55<...<%~"
 }
+
+todo() {}
