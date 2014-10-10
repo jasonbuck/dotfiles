@@ -48,7 +48,7 @@ git_prompt_info () {
 unpushed () {git cherry -v @{upstream} 2>/dev/null |  wc -l | tr -s " "}
 
 need_push () {
-  if [[ $(unpushed) == "0" ]]
+  if [[ $(unpushed) =~ '[^0-9]?0$' ]]
   then
     echo " "
   else
