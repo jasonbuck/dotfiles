@@ -4,40 +4,41 @@
 	"copyOnMouseSelect": false,
 	"detect_indentation": false,
 	"dictionary": "Packages/Language - English/en_US.dic",
-	"drawWhiteSpace": "none",
+	"drawWhiteSpace": "selection",
 	"draw_minimap_border": false,
 	"fade_fold_buttons": false,
 	"find_selected_text": true,
-      "theme": "Spacegray.sublime-theme",
-      "spacegray_tabs_xlarge": true,
-      "spacegray_tabs_auto_width": true,
-      "spacegray_sidebar_font_large": false,
-       "spacegray_sidebar_tree_large": true,
-      "font_face": "Inconsolata",
-	"font_size": 14,
+	"font_face": "Source Code Pro",
+	"font_size": 11,
 	"git_gutter_live_mode": true,
 	"gutter": true,
 	"highlightLine": true,
 	"ignore_inodes": true,
 	"ignored_packages":
 	[
-		"Vintage",
-		".DS_Store",
-		"SyncedSideBar"
+		"Vintage"
 	],
 	"indent_to_bracket": true,
+	"line_padding_bottom": 0,
+	"line_padding_top": 0,
 	"rulers":
 	[
-		80
+		80,
+		120
 	],
 	"save_on_focus_lost": true,
 	"scroll_past_end": true,
 	"show_minimap": true,
 	"sidebar_default": true,
+	"spacegray_sidebar_font_large": true,
+	"spacegray_sidebar_tree_large": true,
+	"spacegray_tabs_auto_width": false,
+	"spacegray_tabs_xlarge": true,
 	"tab_size": 2,
+	"theme": "Spacegray.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_tab_stops": true,
 	"wantVerticalScrollBar": false,
-	"word_wrap": false
+	"word_wrap": true
 }
