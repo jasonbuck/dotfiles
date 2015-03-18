@@ -1,6 +1,7 @@
 {
 	"extensions":
 	[
-		"god"
+		"pyw",
+		"py3"
 	]
 }

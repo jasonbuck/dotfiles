@@ -1,13 +1,17 @@
 {
 	"auto_upgrade_last_run": null,
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
+		"ApplySyntax",
 		"CoffeeScript",
 		"GitGutter",
 		"Package Control",
 		"SCSS",
-		"SideBarGit",
-		"SublimeGit",
-		"Theme - Soda"
+		"Seti_UI",
+		"Seti_UX",
+		"Theme - Glacier"
 	]
 }

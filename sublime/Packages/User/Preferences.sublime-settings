@@ -1,6 +1,9 @@
 {
 	"autoIndent": true,
-	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
+	"caret_extra_bottom": 1,
+	"caret_extra_top": 1,
+	"caret_extra_width": 1,
+	"color_scheme": "Packages/Seti_UI/Scheme/Seti.tmTheme",
 	"copyOnMouseSelect": false,
 	"detect_indentation": false,
 	"dictionary": "Packages/Language - English/en_US.dic",
@@ -8,8 +11,8 @@
 	"draw_minimap_border": false,
 	"fade_fold_buttons": false,
 	"find_selected_text": true,
-	"font_face": "Source Code Pro",
-	"font_size": 11,
+	"font_face": "Menlo",
+	"font_size": 12,
 	"git_gutter_live_mode": true,
 	"gutter": true,
 	"highlightLine": true,
@@ -19,8 +22,9 @@
 		"Vintage"
 	],
 	"indent_to_bracket": true,
-	"line_padding_bottom": 0,
-	"line_padding_top": 0,
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
+	"overlay_scroll_bars": "enabled",
 	"rulers":
 	[
 		80,
@@ -35,7 +39,7 @@
 	"spacegray_tabs_auto_width": false,
 	"spacegray_tabs_xlarge": true,
 	"tab_size": 2,
-	"theme": "Spacegray.sublime-theme",
+	"theme": "Seti.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_tab_stops": true,
