@@ -1,4 +1,17 @@
 {
+	"HTML (Rails)":
+	[
+		"html.erb"
+	],
+	"JSON":
+	[
+		".bowerrc",
+		".csslintrc",
+		".eslintrc",
+		".jscsrc",
+		".jshintrc",
+		"geojson"
+	],
 	"PHP":
 	[
 		"inc",
@@ -25,6 +38,10 @@
 	"Ruby Haml":
 	[
 		"haml"
+	],
+	"Ruby Slim":
+	[
+		"emblem"
 	],
 	"Shell-Unix-Generic":
 	[

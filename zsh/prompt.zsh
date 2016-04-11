@@ -25,20 +25,20 @@ git_branch() {
   echo $(git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
 }
 
-git_dirty() {
-  st=$(git status 2>/dev/null | tail -n 1)
-  if [[ $st == "" ]]
-  then
-    echo ""
-  else
-    if [[ $st =~ "working directory clean" ]]
-    then
-      echo "%{$lightgray%}on%{$reset_color%} %{$blue%}⭠ $(git_prompt_info) ☀%{$reset_color%}"  # ➙ ☀
-    else
-      echo "%{$lightgray%}on%{$reset_color%} %{$lightred%}⭠ $(git_prompt_info)%{$reset_color%}"  # ☠
-    fi
-  fi
-}
+#git_dirty() {
+#  st=$(git status 2>/dev/null | tail -n 1)
+#  if [[ $st == "" ]]
+#  then
+#    echo ""
+#  else
+#    if [[ $st =~ "working directory clean" ]]
+#    then
+#      echo "%{$darkgray%}on%{$reset_color%} %{$blue%}⭠ $(git_prompt_info) ☀%{$reset_color%}"  # ➙ ☀
+#    else
+#      echo "%{$darkgray%}on%{$reset_color%} %{$lightred%}⭠ $(git_prompt_info)%{$reset_color%}"  # ☠
+#    fi
+#  fi
+#}
 
 git_prompt_info () {
  ref=$(git symbolic-ref HEAD 2>/dev/null) || return
@@ -52,15 +52,15 @@ need_push () {
   then
     echo " "
   else
-    echo " %{$lightgray%}with%{$reset_color%}%{$purple%}$(unpushed) unpushed ➙%{$reset_color%} "
+    echo " %{$darkgray%}with%{$reset_color%}%{$purple%}$(unpushed) unpushed ➙%{$reset_color%} "
   fi
 }
 
 directory_name(){
-  echo "%{$lightgray%}%1/%\/%{$reset_color%}"
+  echo "%{$darkgray%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'$(directory_name) $(git_dirty)$(need_push) ›'
+export PROMPT=$'$(directory_name) $(parse_git_dirty)$(need_push) ›'
 
 precmd() {
   title "zsh" "%m" "%55<...<%~"

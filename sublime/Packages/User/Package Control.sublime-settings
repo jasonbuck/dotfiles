@@ -1,17 +1,29 @@
 {
 	"auto_upgrade_last_run": null,
+	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"CoffeeScript"
 	],
 	"installed_packages":
 	[
+		"Alignment",
 		"ApplySyntax",
+		"Better CoffeeScript",
 		"CoffeeScript",
+		"Emmet",
 		"GitGutter",
+		"Github Tools",
+		"HTML-CSS-JS Prettify",
+		"Markdown Preview",
+		"MarkdownEditing",
+		"Material Theme",
 		"Package Control",
+		"Ruby Slim",
 		"SCSS",
 		"Seti_UI",
 		"Seti_UX",
-		"Theme - Glacier"
+		"SublimeLinter",
+		"SublimeLinter-contrib-scss-lint"
 	]
 }

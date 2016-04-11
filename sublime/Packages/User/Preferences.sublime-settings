@@ -1,9 +1,10 @@
 {
 	"autoIndent": true,
+	"bold_folder_labels": true,
 	"caret_extra_bottom": 1,
 	"caret_extra_top": 1,
 	"caret_extra_width": 1,
-	"color_scheme": "Packages/Seti_UI/Scheme/Seti.tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"copyOnMouseSelect": false,
 	"detect_indentation": false,
 	"dictionary": "Packages/Language - English/en_US.dic",
@@ -12,6 +13,10 @@
 	"fade_fold_buttons": false,
 	"find_selected_text": true,
 	"font_face": "Menlo",
+	"font_options":
+	[
+		"gray_antialias"
+	],
 	"font_size": 12,
 	"git_gutter_live_mode": true,
 	"gutter": true,
@@ -19,11 +24,24 @@
 	"ignore_inodes": true,
 	"ignored_packages":
 	[
+		"CoffeeScript",
+		"Markdown",
 		"Vintage"
 	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
 	"indent_to_bracket": true,
-	"line_padding_bottom": 2,
-	"line_padding_top": 2,
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
+	"material_theme_accent_lime": true,
+	"material_theme_compact_panel": true,
+	"material_theme_small_statusbar": true,
+	"material_theme_small_tab": false,
+	"material_theme_tabs_autowidth": true,
+	"material_theme_tree_headings": false,
 	"overlay_scroll_bars": "enabled",
 	"rulers":
 	[
@@ -34,12 +52,8 @@
 	"scroll_past_end": true,
 	"show_minimap": true,
 	"sidebar_default": true,
-	"spacegray_sidebar_font_large": true,
-	"spacegray_sidebar_tree_large": true,
-	"spacegray_tabs_auto_width": false,
-	"spacegray_tabs_xlarge": true,
 	"tab_size": 2,
-	"theme": "Seti.sublime-theme",
+	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_tab_stops": true,
